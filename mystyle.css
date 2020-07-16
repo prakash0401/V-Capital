@@ -6,6 +6,10 @@
     font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background: #F3F3EE;
     overflow-X: hidden;
