@@ -1,18 +1,5 @@
-/* font-family: 'Lato', sans-serif; */
-
-* {
-    font-family: poppins;
-    letter-spacing: 0.4px;
-    font-weight: 300;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-    background: #F3F3EE;
-    overflow-X: hidden;
+body{
+    font-family:poppins;
 }
 
 a {
@@ -39,42 +26,41 @@ a:hover {
 .bg-black {
     background: #000000;
 }
-
-.txt-heading {
-    font-size: 40px;
+.background{
+    background:linear-gradient(90deg, rgba(222,222,222,0.8888) 0%, rgba(255,255,255,0.8888) 100%), url("assets/apple-bg.jpg");
+    align-items: center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.sub-btn {
-    background-color: #140DA0 !important;
+.navbar-brand img{
+    width:100px !important;
+}
+section{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-/*.logo {
-    font-size: 40px;
-    font-weight: 900;
-} */
-
-.logo img{
-    height:80px;width:auto;
+.my-h1{
+    font-weight: 600;
+}
+.my-h1::after{
+    content:"";
+    display:block;
+    height:3px;
+    width:200px;
+    background:#140DA0;
+    margin:auto;
+    margin-top:20px;
 }
 
-.nav-link {
-    font-size: 20px;
-    font-weight: 500;
-    color: #eee !important;
-    position: relative;
-    transition: .6s color;
-}
 
-.nav-link:hover {
-    color: #0CF7ED !important;
-}
 
-.active {
-    color: #0CF7ED !important;
-}
 
-.hero-section {
-    height: 100vh;
+.hero-section{
+height: 100vh;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 38%, rgba(0, 0, 0, 0.2) 100%), url("assets/flex.jpg");
     display: flex;
     align-items: center;
@@ -83,10 +69,14 @@ a:hover {
     background-size: cover;
     background-position: top;
 }
+.frm-control{
+    background:rgba{255,255,255,0.6};
+}
 
 .intro {
     text-shadow: 1px -1px 10px rgba(0, 0, 0, 1);
     font-weight: 900;
+    margin:50px auto;
 }
 
 .intro p {
@@ -117,12 +107,8 @@ a:hover {
     border-bottom: 2px solid #140DA0;
 }
 
-.text-about{
-    width:80%;
-    font-size:18px;
-    font-weight: 300;
-}
 
+/* Professional team */
 .slider-area {
     padding: 50px 0;
     position: relative;
@@ -160,6 +146,7 @@ a:hover {
 }
 
 .carousel-caption h4 {
+    font-size:20px;
     color: #0CF7ED;
     ;
 }
@@ -175,66 +162,47 @@ a:hover {
     bottom: -35px;
 }
 
-.hr-short {
-    background: orange;
-    height:2px;
-    width: 40%;
-    opacity: 0.5;
-}
-
-.background {
-    background:linear-gradient(90deg, rgba(222,222,222,0.8888) 0%, rgba(255,255,255,0.8888) 100%), url("assets/apple-bg.jpg");
-    align-items: center;
-    background-attachment: fixed;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* Our Services */
 
 .service-box {
     background: #eee;
     border:2px solid #000099;
-    border-radius:40px;
+    border-radius:20px;
     margin:auto;
-    padding: 40px;
-    height: 200px;
+    padding: 20px;
+    height: 150px;
     box-shadow: -6px 5px 10px -1px rgba(0, 0, 0, 0.6);
     transition: all 0.4s ease-in 0s;
 }
 
 .service-box i {
     color: #140DA0;
-    font-size: 60px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .service-box h3 {
     color: #140DA0;
-    font-size: 22px;
+    font-size:15px;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 
 .service-box:hover {
-    background: linear-gradient(to right bottom, #000099, #0033ac, #004fb6, #0068b8, #007fb7);
-    box-shadow: -6px 5px 10px -1px rgba(0, 0, 0, 0.6);
-}
-
-.service-box:hover h3 {
-    color: #eee;
+    cursor: pointer;
 }
 
 
 .service-box:hover i {
-    font-size: 50px;
+    font-size: 40px;
     transition: 0.4s;
-    color: #eee;
+    color: orange;
 }
 
 
 
+/* footer */
 
 .f-top {
     background: rgba(0,0,0,0.9);
@@ -314,19 +282,29 @@ a:hover {
     color: #ff0000;
 }
 
-.footer {
-    background: #000;
-}
-
 .txt-reserved {
     color: #BDC3C7;
 }
 
-
-/* Media Query */
-
+/* media query*/
 @media only screen and (max-width:768px) {
     .hero-section {
         height: 150vh;
+    }
+    .service-box h3 {
+        font-size:15px;
+    }
+}
+
+@media only screen and (max-width:396px) {
+    body{
+        width:100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .service-box{
+        padding:30px 10px;
     }
 }
