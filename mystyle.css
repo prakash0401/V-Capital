@@ -1,13 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family:poppins;
 }
 
 a {
-    color: #0CF7ED;
+    color: #eee;
 }
 
 a:hover {
-    color: #eee;
+    color: #e67e22;
     text-decoration: none;
 }
 
@@ -35,12 +38,21 @@ a:hover {
     background-position: center;
 }
 
+hr{
+    width:100%;
+    background:#fff;
+    display:none;
+}
+
 .navbar-brand img{
     width:100px !important;
 }
 section{
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.btn1{
+    border-radius:200px;
 }
 
 .my-h1{
@@ -51,13 +63,17 @@ section{
     display:block;
     height:3px;
     width:200px;
-    background:#140DA0;
+    background:#e67e22;
     margin:auto;
     margin-top:20px;
 }
+.weight-900{
+    font-weight: 800;
+}
 
-
-
+.orange1{color:#e67e22;}
+.bg-orange1{
+    background:#e67e22;}
 
 .hero-section{
 height: 100vh;
@@ -165,18 +181,17 @@ height: 100vh;
 /* Our Services */
 
 .service-box {
-    background: #eee;
-    border:2px solid #000099;
+    background: #fff;
+/*    border:2px solid #000099;*/
     border-radius:20px;
     margin:auto;
     padding: 20px;
     height: 150px;
-    box-shadow: -6px 5px 10px -1px rgba(0, 0, 0, 0.6);
-    transition: all 0.4s ease-in 0s;
+    
 }
 
 .service-box i {
-    color: #140DA0;
+    color: #e67e22;
     font-size: 40px;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -191,6 +206,9 @@ height: 100vh;
 
 .service-box:hover {
     cursor: pointer;
+    background:#fff;
+    box-shadow: -3px 2px 12px -1px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease-in 0s;
 }
 
 
@@ -208,6 +226,7 @@ height: 100vh;
     background: rgba(0,0,0,0.9);
     position:relative;
 }
+/*
 .f-top::before{
     position:absolute;
     display:block;
@@ -217,6 +236,7 @@ height: 100vh;
     transform:translate(-50%, -50%);
     opacity:0.25;
 }
+*/
 
 .txt-footer {
     color: #E5E7E9;
@@ -243,7 +263,7 @@ height: 100vh;
 
 .footer-ul li a:hover {
     text-decoration: none;
-    color: #0CF7ED;
+    color: #e67e22;
 }
 
 .icon a {
@@ -288,6 +308,7 @@ height: 100vh;
 
 /* media query*/
 @media only screen and (max-width:768px) {
+    hr{display:block !important;}
     .hero-section {
         height: 150vh;
     }
@@ -296,15 +317,19 @@ height: 100vh;
     }
 }
 
-@media only screen and (max-width:396px) {
+@media only screen and (max-width:360px) {
     body{
         width:100% !important;
         overflow-x: hidden !important;
     }
+    
+    hr{display:block !important;}
 }
 
 @media only screen and (max-width:576px) {
+    hr{display:block !important;}
     .service-box{
         padding:30px 10px;
     }
+    
 }
